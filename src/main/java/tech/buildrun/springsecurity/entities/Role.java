@@ -2,8 +2,6 @@ package tech.buildrun.springsecurity.entities;
 
 import jakarta.persistence.*;
 
-import javax.annotation.processing.Generated;
-
 @Entity
 @Table(name = "tb_roles")
 public class Role {
@@ -11,15 +9,15 @@ public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     @Column(name = "role_id")
-    private Long roleId;
+    private String roleId;
 
     private String name;
 
-    public Long getRoleId() {
+    public String getRoleId() {
         return roleId;
     }
 
-    public void setRoleId(Long roleId) {
+    public void setRoleId(String roleId) {
         this.roleId = roleId;
     }
 
